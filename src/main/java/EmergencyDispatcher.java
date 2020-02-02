@@ -4,6 +4,10 @@ public class EmergencyDispatcher extends Employee {
     public int numberOfPatients = 10;
     public String employeeType = "Emergency Dispatcher";
 
+    public EmergencyDispatcher(String employeeName) {
+        super(employeeName);
+    }
+
     @Override
     public String getIsBusy() {
         return ("The Emergency Dispatcher is on the line please hold while another agent is on their way to assit you.?");

@@ -1,13 +1,21 @@
-public class Employee {
-    public int salary = 50000;
+public abstract class Employee {
+    public int salary;
     public int bloodLevel = 100;
     public int healthLevel = 100;
-    public String wasPaid = "| Employee was Paid | ";
-    public String employeeType = "| Nurse |";
-    public String numberOfPatients = "| Too Many! |";
+    public String wasPaid;
+    public String employeeType;
+    public String numberOfPatients;
     public String employeeName;
     public String isPaid = "| Paid in Full |";
     public String isBusy = "| This employee is currently busy and cannot take on a new task |";
+
+    public Employee(String employeeName){
+        this.employeeName = employeeName;
+
+    }
+
+
+
 
     public int getBloodLevel() {
         return bloodLevel;
@@ -48,13 +56,11 @@ public class Employee {
                 ", healthLevel=" + healthLevel +
                 ", wasPaid='" + wasPaid + '\'' +
                 ", employeeType='" + employeeType + '\'' +
-                ", patient='" + numberOfPatients + '\'' +
+                ", numberOfPatients='" + numberOfPatients + '\'' +
                 ", employeeName='" + employeeName + '\'' +
                 ", isPaid='" + isPaid + '\'' +
                 ", isBusy='" + isBusy + '\'' +
                 '}';
     }
-
-
 }
 

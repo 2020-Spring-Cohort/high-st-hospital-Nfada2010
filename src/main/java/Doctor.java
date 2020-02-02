@@ -2,6 +2,25 @@ public class Doctor extends Employee {
     public String medicalFocus = "Heart";
     public String canDrawBlood = "Yes";
     public String employeeType = "Doctor";
+    public String employeeName = "Dr. Becca";
+    public int salary = 95000;
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public Doctor(String employeeName) {
+        super(employeeName);
+    }
+
+    @Override
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
 
     public String getMedicalFocus() {
         return medicalFocus;
@@ -26,11 +45,6 @@ public class Doctor extends Employee {
 
     public void setEmployeeType(String employeeType) {
         this.employeeType = "Doctor";
-    }
-
-    public Doctor() {
-
-
     }
 
 

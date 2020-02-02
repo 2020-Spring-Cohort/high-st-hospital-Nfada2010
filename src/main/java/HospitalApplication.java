@@ -4,26 +4,27 @@ public class HospitalApplication {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+
         Patientwing patientwing = new Patientwing();
         Staff staff = new Staff();
 
 
-        Employee ted = new Employee();
+        Employee ted = new EmergencyDispatcher("Ted");
         staff.hireEmployee(ted);
 
-        Doctor drBecca = new Doctor();
+        Doctor drBecca = new Doctor("Dr. Becca");
         staff.hireEmployee(drBecca);
 
-        Nurse alice = new Nurse();
+        Nurse alice = new Nurse("Alice");
         staff.hireEmployee(alice);
 
-        Janitor nick = new Janitor();
+        Janitor nick = new Janitor("Nick");
         staff.hireEmployee(nick);
 
         Patient john = new Patient();
         patientwing.admitPatient(john);
 
-        Receptionist pam = new Receptionist();
+        Receptionist pam = new Receptionist("Pam");
         staff.hireEmployee(pam);
 
 
@@ -64,25 +65,25 @@ public class HospitalApplication {
                     String interactMenuChoice = input.nextLine();
                     switch (interactMenuChoice) {
                         case "Nurse":
-                            staff.hireEmployee(new Nurse());
+                            staff.hireEmployee(new Nurse(employeeType));
                             System.out.printf("\n You have Selected Nurse\n");
 
 
                         case "Doctor":
-                            staff.hireEmployee(new Doctor());
+                            staff.hireEmployee(new Doctor(employeeType));
                             System.out.printf("\n You have Selected Doctor\n");
 
 
                         case "Receptionist":
-                            staff.hireEmployee(new Receptionist());
+                            staff.hireEmployee(new Receptionist(employeeType));
                             System.out.printf("\n You have Selected Receptionist\n");
 
                         case "Janitor":
-                            staff.hireEmployee(new Janitor());
+                            staff.hireEmployee(new Janitor(employeeType));
                             System.out.printf("\n You have Selected Janitor\n");
 
                         case "Emergency Dispatcher":
-                            staff.hireEmployee(new EmergencyDispatcher());
+                            staff.hireEmployee(new EmergencyDispatcher(employeeType));
                             System.out.printf("\n You have Selected Emergency Dispatcher\n");
 
                     }
@@ -103,7 +104,7 @@ public class HospitalApplication {
                 }
 
                 if (r2.equalsIgnoreCase("Fire")) {
-                    System.out.printf("Here is the current Staff" +
+                    System.out.printf("\nHere is the current Staff\n" +
                     "--------------------------\n");
 
         System.out.println(ted);
