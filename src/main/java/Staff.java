@@ -7,6 +7,7 @@ public class Staff {
     public static boolean employeesWorking() {
         return true;
     }
+
         public void hireEmployee(Employee newEmployee) {
             this.staff.put(newEmployee.getName(), newEmployee);
         }
@@ -19,7 +20,14 @@ public class Staff {
 
         public Map<String, Employee> getStaff(){return staff;}
 
-    }
+        public void payEmployees(){
+        for (Employee employee : staff.values()){
+            payEmployees();
+        }
+        }
+
+
+}
 
 
 

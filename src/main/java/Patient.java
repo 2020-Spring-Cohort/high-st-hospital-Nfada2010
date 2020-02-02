@@ -4,7 +4,11 @@ public class Patient {
     public int healthLevel = 100;
     public String condition = "Is ill with a fever";
     public String bloodType = "A+";
-    public String patientName = "JohnDoe";
+//    public String patientName = "JohnDoe";
+
+    public Patient(String patientName) {
+        super(patientName);
+    }
 
     public void tick() {
         bloodLevel -= 4;

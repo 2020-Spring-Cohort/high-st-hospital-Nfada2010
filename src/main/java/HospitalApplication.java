@@ -21,7 +21,7 @@ public class HospitalApplication {
         Janitor nick = new Janitor("Nick");
         staff.hireEmployee(nick);
 
-        Patient john = new Patient();
+        Patient john = new Patient("John Doe");
         patientwing.admitPatient(john);
 
         Receptionist pam = new Receptionist("Pam");
@@ -47,53 +47,58 @@ public class HospitalApplication {
                 if (r2.equalsIgnoreCase("hire")) {
 
                     System.out.printf("\nWhat Position are you Hiring?");
-                    String employeeType = input.nextLine();
-                    input.nextLine();
-                    r2.equalsIgnoreCase(employeeType);
+//                    String employeeType = input.nextLine();
+//                    input.nextLine();
+//                    r2.equalsIgnoreCase(employeeType);
 
 
-//                   for (String employeeType : staff.getStaff().keySet()){
-//                       Employee employee = staff.e().get(employeeType);
-//                       System.out.printf(employeeType);
-//                   }
-                    System.out.printf("Here are the Current Positions at Cle Browns Hospital\n" +
+                    for (String employeeType : staff.getStaff().keySet()) {
+                        Employee e3 = staff.getStaff().get(employeeType);
+                        System.out.printf(employeeType + e3);
+                    }
+                    System.out.printf("\nHere are the Current Positions at Cle Browns Hospital\n" +
                             "<1>. Nurse\n" +
                             "<2>. Doctor\n " +
                             "<3>. Receptionist\n" +
                             "<4>. Janitor\n" +
                             "<5>. Emergency Dispatcher\n");
                     String interactMenuChoice = input.nextLine();
+
+
                     switch (interactMenuChoice) {
                         case "Nurse":
-                            staff.hireEmployee(new Nurse(employeeType));
-                            System.out.printf("\n You have Selected Nurse\n");
+                            hi = new Nurse(newEmployee);
+//                            staff.hireEmployee(new Nurse(employeeType));
+                            System.out.printf("\n You have Hired a Nurse\n");
 
 
                         case "Doctor":
-                            staff.hireEmployee(new Doctor(employeeType));
-                            System.out.printf("\n You have Selected Doctor\n");
+                            newEmployee = new Doctor(newEmployee);
+//                            staff.hireEmployee(new Doctor(employeeType));
+                            System.out.printf("\n You have Hired a  Doctor\n");
 
 
                         case "Receptionist":
                             staff.hireEmployee(new Receptionist(employeeType));
-                            System.out.printf("\n You have Selected Receptionist\n");
+                            System.out.printf("\n You have Hired a  Receptionist\n");
 
                         case "Janitor":
                             staff.hireEmployee(new Janitor(employeeType));
-                            System.out.printf("\n You have Selected Janitor\n");
+                            System.out.printf("\n You have Hired a Janitor\n");
 
                         case "Emergency Dispatcher":
                             staff.hireEmployee(new EmergencyDispatcher(employeeType));
-                            System.out.printf("\n You have Selected Emergency Dispatcher\n");
+                            System.out.printf("\n You have Hired a Emergency Dispatcher\n");
 
                     }
 
 
                     System.out.printf("\nWhat is the Employee's Name?");
+                    Employee newEmployee;
                     String employeeName = input.nextLine();
 
-
-                    for (String ignored : staff.getStaff().keySet()) {
+                    staff.hireEmployee(hireEmployee);
+                    for (String employeeName : staff.getStaff().keySet()) {
                         Employee e2 = staff.getStaff().get(employeeName);
                         System.out.printf(employeeName = "\n-|-\n" + e2.getEmployeeType() + e2.getEmployeeName());
                     }
@@ -105,53 +110,59 @@ public class HospitalApplication {
 
                 if (r2.equalsIgnoreCase("Fire")) {
                     System.out.printf("\nHere is the current Staff\n" +
-                    "--------------------------\n");
+                            "--------------------------\n");
 
-        System.out.println(ted);
-        System.out.println(drBecca);
-        System.out.println(alice);
-        System.out.println(nick);
-        System.out.println(pam);
+                    System.out.println(ted);
+                    System.out.println(drBecca);
+                    System.out.println(alice);
+                    System.out.println(nick);
+                    System.out.println(pam);
 
 
                     for (String employeeName : staff.getStaff().keySet()) {
                         Employee e2 = staff.getStaff().get(employeeName);
 //                        System.out.printf(employeeName + "\n-|-\n" + e2.getEmployeeType());
-
-                        System.out.printf("\nWho is getting the Axe?");
-
-                        String r3 = input.nextLine();
-                        input.nextLine();
-                        staff.fireEmployee(r3);
-                        System.out.printf(employeeName + "\n|||" + e2);
-                        System.out.printf("\nCongrats they have been canned, hopefully they had savings...");
                     }
-                    if (r2.equalsIgnoreCase("Treat Patient")){
 
-                        System.out.printf("How would like to treat your patient?\n " +
-                                "Have Doctor <-drDraw->" +
-                                "Have Nurse <-nurseDraw->" +
-                                "Pay Employees <-PAY->" +
-                                "Pay Put Receptionist on call <-mainCall->" +
-                                "Pay Put Emergency Dispacther on call <-emergencyCall->" +
-                                "Check if Employee is busy <-BUSY->" +
-                                "Have Janitor Sweep <-CLEAN->");
-                        String interactMenu = input.nextLine();
-                        switch (interactMenu){
-                            case "drDraw":
+                    System.out.printf("\nWho is getting the Axe?\n");
 
-                            patientwing.drawBlood();
-                                System.out.printf("The Doctor has drawn the blood over everyone on the floor!\n" +
-                                        "I don't think we actually needed that much...\n");
-                                break;
+                    String r3 = input.nextLine();
+                    input.nextLine();
+                    staff.fireEmployee(r3);
+                    System.out.printf(r3 + "\n||||||||||||||||||||||||||||||||\n\n" + e2);
 
-                        }
-                    }
+                    System.out.printf("\nCongrats they have been canned, hopefully they had savings...\n");
+                }
+            }
+            if (r2.equalsIgnoreCase("Treat Patient")) {
+
+                System.out.printf("How would like to treat your patient?\n " +
+                        "\nHave Doctor <-drDraw->" +
+                        "\nHave Nurse <-nurseDraw->" +
+                        "\nPay Employees <-PAY->" +
+                        "\nPay Put Receptionist on call <-mainCall->" +
+                        "\nPay Put Emergency Dispacther on call <-emergencyCall->" +
+                        "\nCheck if Employee is busy <-BUSY->" +
+                        "\nHave Janitor Sweep <-CLEAN->");
+                String interactMenu = input.nextLine();
+                switch (interactMenu) {
+                    case "drDraw":
+
+                        patientwing.drawBlood();
+                        System.out.printf("The Doctor has drawn the blood over everyone on the floor!\n" +
+                                "I don't think we actually needed that much...\n");
+                        break;
+
+                    default:
+                        System.out.printf("Please try typing something that actually does something");
+
                 }
             }
         }
     }
 }
+
+
 
 
 
