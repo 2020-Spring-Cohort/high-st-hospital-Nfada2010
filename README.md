@@ -1,4 +1,4 @@
-# High Street Hospital
+# High Street Patientwing
 
 ## Module 1 Mastery Project
 
@@ -9,9 +9,9 @@
 
 ## The Scenario
 
-High Street Hospital is an organizational mess. They have unkempt files of employee information scattered throughout manilla folders, computer data files, and old tin filing cabinets. With the madness of the daily grind, patients are the priority. But the utmost care cannot be given to the patients if the hospital is disorganized. High Street Hospital wants to get it together. They have subcontracted We Can Code IT full-stack apprentices (who work for the reasonably inexpensive price of free) to come in and organize. They enable you to set up shop with a few company laptops in an old disheveled break room. Your mission is to create a set of classes that contain information on the employees at High Street Hospital:
+High Street Patientwing is an organizational mess. They have unkempt files of employee information scattered throughout manilla folders, computer data files, and old tin filing cabinets. With the madness of the daily grind, patients are the priority. But the utmost care cannot be given to the patients if the hospital is disorganized. High Street Patientwing wants to get it together. They have subcontracted We Can Code IT full-stack apprentices (who work for the reasonably inexpensive price of free) to come in and organize. They enable you to set up shop with a few company laptops in an old disheveled break room. Your mission is to create a set of classes that contain information on the employees at High Street Patientwing:
 
-**High Street Hospital has the following model at its facility:**
+**High Street Patientwing has the following model at its facility:**
 
 - `Employee`
   - `paySalary()` abstract method with no specifications. It pays employee types differently by displaying different messages to the user.
@@ -19,7 +19,7 @@ High Street Hospital is an organizational mess. They have unkempt files of emplo
   - default `BLOOD_LEVEL` of 20
   - default `HEALTH_LEVEL` of 10
 
-**High Street Hospital has the following classifications at its facility**
+**High Street Patientwing has the following classifications at its facility**
 
 - `Doctor` is a subclass of Employee and gets paid 90,000
 - `Nurse` is a subclass of Employee and gets paid 50,000
@@ -45,7 +45,7 @@ The following **Behaviors** will need to be permitted
 
 ### Part 1
 
-Let's get organized. Your team is meeting for the first time at High Street Hospital. Programming at this time is out of the question. You need to get a feel for the task at hand. You do not even want to create an algorithm yet.
+Let's get organized. Your team is meeting for the first time at High Street Patientwing. Programming at this time is out of the question. You need to get a feel for the task at hand. You do not even want to create an algorithm yet.
 
 Diagram the classes you will need for this program. What are the inheritance relationships? How and where does the problem tell you this information?
 

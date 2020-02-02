@@ -7,7 +7,7 @@ public class Employee {
     public String wasPaid = "Employee was Paid";
     public String employeeType = "Nurse";
     public String patient = "john";
-
+    public String employeeName = "Zach Braff";
     public String isPaid = "Paid in Full";
     public String isBusy = "This employee is currently busy and cannot take on a new task";
 
@@ -36,7 +36,12 @@ public class Employee {
     }
 
     public String getEmployeeType(){return employeeType;}
+    public String getEmployeeName(){return employeeName;}
 
+    public String getName() {
+        String employeeName;
+        return "employeeName";
+    }
 
     @Override
     public String toString() {
@@ -47,9 +52,12 @@ public class Employee {
                 ", wasPaid='" + wasPaid + '\'' +
                 ", employeeType='" + employeeType + '\'' +
                 ", patient='" + patient + '\'' +
+                ", employeeName='" + employeeName + '\'' +
                 ", isPaid='" + isPaid + '\'' +
                 ", isBusy='" + isBusy + '\'' +
                 '}';
     }
+
+
 }
 
