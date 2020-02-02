@@ -12,11 +12,13 @@ public class Staff {
         }
 
 
-        public void fireEmployee(String newEmployee) {
-            this.staff.remove(newEmployee);
+
+        public void fireEmployee(String employeeName) {
+            this.staff.remove(employeeName);
         }
 
         public Map<String, Employee> getStaff(){return staff;}
+
     }
 
 

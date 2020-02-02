@@ -4,7 +4,23 @@ public class Patient {
     public int healthLevel = 100;
     public String condition = "Is ill with a fever";
     public String bloodType = "A+";
-    public String name = "JohnDoe";
+    public String patientName = "JohnDoe";
+
+    public void tick() {
+        bloodLevel -= 4;
+        healthLevel -= 2;
+        condition = "getting worse";
+
+    }
+
+    public void drawBlood(){
+        bloodLevel +=100;
+    }
+    public void healHealth(){healthLevel +=100;}
+
+
+
+
 
     public boolean isAlive() {
         return isAlive;
@@ -26,7 +42,7 @@ public class Patient {
         return bloodType;
     }
 
-    public String getName() {
-        return name;
+    public String getPatientName() {
+        return patientName;
     }
 }
