@@ -12,6 +12,7 @@ public abstract class Employee {
     public Employee(String employeeName){
         this.employeeName = employeeName;
 
+
     }
 
 
@@ -48,19 +49,19 @@ public abstract class Employee {
         return employeeName;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "salary=" + salary +
-                ", bloodLevel=" + bloodLevel +
-                ", healthLevel=" + healthLevel +
-                ", wasPaid='" + wasPaid + '\'' +
-                ", employeeType='" + employeeType + '\'' +
-                ", numberOfPatients='" + numberOfPatients + '\'' +
-                ", employeeName='" + employeeName + '\'' +
-                ", isPaid='" + isPaid + '\'' +
-                ", isBusy='" + isBusy + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "salary=" + salary +
+//                ", bloodLevel=" + bloodLevel +
+//                ", healthLevel=" + healthLevel +
+//                ", wasPaid='" + wasPaid + '\'' +
+//                ", employeeType='" + employeeType + '\'' +
+//                ", numberOfPatients='" + numberOfPatients + '\'' +
+//                ", employeeName='" + employeeName + '\'' +
+//                ", isPaid='" + isPaid + '\'' +
+//                ", isBusy='" + isBusy + '\'' +
+//                '}';
+//    }
 }
 

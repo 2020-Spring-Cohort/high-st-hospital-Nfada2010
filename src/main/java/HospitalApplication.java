@@ -66,15 +66,16 @@ public class HospitalApplication {
 
 
                     switch (interactMenuChoice) {
+
                         case "Nurse":
-                            hi = new Nurse(newEmployee);
-//                            staff.hireEmployee(new Nurse(employeeType));
+//                            hi = new Nurse(newEmployee);
+                            staff.hireEmployee();
                             System.out.printf("\n You have Hired a Nurse\n");
 
 
                         case "Doctor":
-                            newEmployee = new Doctor(newEmployee);
-//                            staff.hireEmployee(new Doctor(employeeType));
+//                            newEmployee = new Doctor(newEmployee);
+                            staff.hireEmployee(new Doctor(employeeType));
                             System.out.printf("\n You have Hired a  Doctor\n");
 
 
@@ -83,25 +84,30 @@ public class HospitalApplication {
                             System.out.printf("\n You have Hired a  Receptionist\n");
 
                         case "Janitor":
-                            staff.hireEmployee(new Janitor(employeeType));
+                            staff.hireEmployee(new Janitor);
                             System.out.printf("\n You have Hired a Janitor\n");
 
                         case "Emergency Dispatcher":
                             staff.hireEmployee(new EmergencyDispatcher(employeeType));
                             System.out.printf("\n You have Hired a Emergency Dispatcher\n");
 
+
+                        default:
+                            System.out.printf("That was not a preset action ");
+
                     }
 
 
                     System.out.printf("\nWhat is the Employee's Name?");
-                    Employee newEmployee;
+//                    Employee newEmployee;
                     String employeeName = input.nextLine();
+//                    Employee newEmployee;
 
-                    staff.hireEmployee(hireEmployee);
-                    for (String employeeName : staff.getStaff().keySet()) {
-                        Employee e2 = staff.getStaff().get(employeeName);
-                        System.out.printf(employeeName = "\n-|-\n" + e2.getEmployeeType() + e2.getEmployeeName());
-                    }
+                    staff.hireEmployee(newEmployee);
+//                    for (String employeeName : staff.getStaff().keySet()) {
+//                        Employee e2 = staff.getStaff().get(employeeName);
+//                        System.out.printf(employeeName = "\n-|-\n" + e2.getEmployeeType() + e2.getEmployeeName());
+//                    }
                     System.out.printf("\n---Welcome to the Factory of Sadness---\n" +
                             "\n---On 4th and long we run up the middle---");
 
@@ -133,29 +139,30 @@ public class HospitalApplication {
 
                     System.out.printf("\nCongrats they have been canned, hopefully they had savings...\n");
                 }
-            }
-            if (r2.equalsIgnoreCase("Treat Patient")) {
 
-                System.out.printf("How would like to treat your patient?\n " +
-                        "\nHave Doctor <-drDraw->" +
-                        "\nHave Nurse <-nurseDraw->" +
-                        "\nPay Employees <-PAY->" +
-                        "\nPay Put Receptionist on call <-mainCall->" +
-                        "\nPay Put Emergency Dispacther on call <-emergencyCall->" +
-                        "\nCheck if Employee is busy <-BUSY->" +
-                        "\nHave Janitor Sweep <-CLEAN->");
-                String interactMenu = input.nextLine();
-                switch (interactMenu) {
-                    case "drDraw":
+                if (r2.equalsIgnoreCase("Treat Patient")) {
 
-                        patientwing.drawBlood();
-                        System.out.printf("The Doctor has drawn the blood over everyone on the floor!\n" +
-                                "I don't think we actually needed that much...\n");
-                        break;
+                    System.out.printf("How would like to treat your patient?\n " +
+                            "\nHave Doctor <-drDraw->" +
+                            "\nHave Nurse <-nurseDraw->" +
+                            "\nPay Employees <-PAY->" +
+                            "\nPay Put Receptionist on call <-mainCall->" +
+                            "\nPay Put Emergency Dispacther on call <-emergencyCall->" +
+                            "\nCheck if Employee is busy <-BUSY->" +
+                            "\nHave Janitor Sweep <-CLEAN->");
+                    String interactMenu = input.nextLine();
+                    switch (interactMenu) {
+                        case "drDraw":
 
-                    default:
-                        System.out.printf("Please try typing something that actually does something");
+                            patientwing.drawBlood();
+                            System.out.printf("The Doctor has drawn the blood over everyone on the floor!\n" +
+                                    "I don't think we actually needed that much...\n");
+                            break;
 
+                        default:
+                            System.out.printf("Please try typing something that actually does something");
+
+                    }
                 }
             }
         }
