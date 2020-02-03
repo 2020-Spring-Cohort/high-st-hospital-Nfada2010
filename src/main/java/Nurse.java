@@ -2,8 +2,26 @@ public class Nurse extends Employee{
     public String canDrawBlood = "Yes";
     public String numberOfPatients = "Too Many!";
     public String employeeName = "Alice";
-
+    public String employeeID ="68421";
     public int salary = 50000;
+
+    public String getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    @Override
+    public int getSalary() {
+        return salary;
+    }
+
+    @Override
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 
     public Nurse(String employeeName) {
         super(employeeName);

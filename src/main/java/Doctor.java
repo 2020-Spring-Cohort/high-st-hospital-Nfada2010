@@ -1,9 +1,18 @@
 public class Doctor extends Employee {
-    public String medicalFocus = "Heart";
-    public String canDrawBlood = "Yes";
-    public String employeeType = "Doctor";
-    public String employeeName = "Dr. Becca";
+    public String medicalFocus = "\nHeart";
+    public String canDrawBlood = "\nYes";
+    public String employeeType = "\nDoctor";
+    public String employeeName = "\nDr. Becca";
+    public String employeeID ="894215";
     public int salary = 95000;
+
+    public String getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
+    }
 
     public void setSalary(int salary) {
         this.salary = salary;

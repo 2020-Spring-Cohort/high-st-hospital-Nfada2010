@@ -1,10 +1,28 @@
-public class Employee {
-    public int salary;
+public abstract class Employee {
+    public int salary = 45000;
     public int bloodLevel = 100;
     public int healthLevel = 100;
-    public String wasPaid;
-    public String employeeType;
-    public String numberOfPatients;
+
+    public Employee() {
+
+    }
+
+    public String getEmployeeIDnumber() {
+        return employeeIDnumber;
+    }
+
+    public void setEmployeeIDnumber(String employeeIDnumber) {
+        this.employeeIDnumber = employeeIDnumber;
+    }
+
+    public String getIsPaid() {
+        return isPaid;
+    }
+
+    public String employeeIDnumber = "12341";
+//    public String wasPaid;
+    public String employeeType = "Nurse";
+    public String numberOfPatients = "Too Many!";
     public String employeeName;
     public String isPaid = "| Paid in Full |";
     public String isBusy = "| This employee is currently busy and cannot take on a new task |";
@@ -28,9 +46,9 @@ public class Employee {
         this.healthLevel = healthLevel;
     }
 
-    public void setWasPaid(String wasPaid) {
-        this.wasPaid = wasPaid;
-    }
+//    public void setWasPaid(String wasPaid) {
+//        this.wasPaid = wasPaid;
+//    }
 
     public void setEmployeeType(String employeeType) {
         this.employeeType = employeeType;
