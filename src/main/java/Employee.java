@@ -9,14 +9,48 @@ public class Employee {
     public String isPaid = "| Paid in Full |";
     public String isBusy = "| This employee is currently busy and cannot take on a new task |";
 
+
     public Employee(String employeeName){
         this.employeeName = employeeName;
 
 
     }
 
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 
+    public void setBloodLevel(int bloodLevel) {
+        this.bloodLevel = bloodLevel;
+    }
 
+    public void setHealthLevel(int healthLevel) {
+        this.healthLevel = healthLevel;
+    }
+
+    public void setWasPaid(String wasPaid) {
+        this.wasPaid = wasPaid;
+    }
+
+    public void setEmployeeType(String employeeType) {
+        this.employeeType = employeeType;
+    }
+
+    public void setNumberOfPatients(String numberOfPatients) {
+        this.numberOfPatients = numberOfPatients;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public void setIsPaid(String isPaid) {
+        this.isPaid = isPaid;
+    }
+
+    public void setIsBusy(String isBusy) {
+        this.isBusy = isBusy;
+    }
 
     public int getBloodLevel() {
         return bloodLevel;

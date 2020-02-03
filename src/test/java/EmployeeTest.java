@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EmployeeTest {
+    Employee underTest = new Employee("Employee");
 
     @Test
     public void testsGoHere() {
@@ -13,47 +14,48 @@ public class EmployeeTest {
     @Test
     //write code to play with pet to lessen boredom level
     public void hireEmployee() {
-        Employee underTest = new Employee("Employee");
+        return;
+
     }
 
 
-    public int getBloodLevel() {
-        return super.getBloodLevel();
+    public void getBloodLevel() {
+        return ;
     }
 
 
-    public int getHealthLevel() {
-        return super.getHealthLevel();
+    public void getHealthLevel() {
+        return ;
     }
 
 
     public String getNumberOfPatients() {
-        return super.getNumberOfPatients();
+        return getNumberOfPatients();
     }
 
 
     public String getWasPaid() {
-        return super.getWasPaid();
+        return getWasPaid();
     }
 
 
     public String getIsBusy() {
-        return super.getIsBusy();
+        return getIsBusy();
     }
 
 
     public int getSalary() {
-        return super.getSalary();
+        return getSalary();
     }
 
 
     public String getEmployeeType() {
-        return super.getEmployeeType();
+        return getEmployeeType();
     }
 
 
     public String getEmployeeName() {
-        return super.getEmployeeName();
+        return getEmployeeName();
     }
 
 

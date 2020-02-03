@@ -1,14 +1,17 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class HospitalApplication {
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
         Patientwing patientwing = new Patientwing();
-        Staff staff = new Staff();
-        String employeeType = input.nextLine();
-        String newEmployee = input.nextLine();
+        Staff staff = new staff(HashMap<String,Employee> staff);
+        String employeeType = "";
+        String newEmployee = "";
+
 
 
 
@@ -49,72 +52,78 @@ public class HospitalApplication {
 
                 if (r2.equalsIgnoreCase("hire")) {
 
+
                     System.out.printf("\nWhat Position are you Hiring?");
 //                    String emplyeeType = input.nextLine();
 //                    input.nextLine();
 //                    r2.equalsIgnoreCase(employeeType);
 
-
 //                    for (String employeeType : staff.getStaff().keySet()) {
 //                        Employee e3 = staff.getStaff().get(employeeType);
 //                        System.out.printf(employeeType + e3);
-                    }
-                    System.out.printf("\nHere are the Current Positions at Cle Browns Hospital\n" +
-                            "<1>. Nurse\n" +
-                            "<2>. Doctor\n " +
-                            "<3>. Receptionist\n" +
-                            "<4>. Janitor\n" +
-                            "<5>. Emergency Dispatcher\n");
-                    String interactMenuChoice = input.nextLine();
+                }
+                System.out.printf("\nHere are the Current Positions at Cle Browns Hospital\n" +
+                        "<1>. Nurse\n" +
+                        "<2>. Doctor\n " +
+                        "<3>. Receptionist\n" +
+                        "<4>. Janitor\n" +
+                        "<5>. Emergency Dispatcher\n");
+                String interactMenuChoice = input.nextLine();
 
 
-                    switch (interactMenuChoice) {
+                switch (interactMenuChoice) {
 
-                        case "Nurse":
+
+                    case "Nurse":
 //                            hi = new Nurse(newEmployee);
-                            staff.hireEmployee(new Nurse(employeeType));
-                            System.out.printf("\n You have Hired a Nurse\n");
+                        staff.hireEmployee(new Nurse(employeeType));
+                        System.out.printf("\n You have Hired a Nurse\n");
+                        break;
 
 
-                        case "Doctor":
+                    case "Doctor":
 //                            newEmployee = new Doctor(newEmployee);
-                            staff.hireEmployee(new Doctor(employeeType));
-                            System.out.printf("\n You have Hired a  Doctor\n");
+                        staff.hireEmployee(new Doctor(employeeType));
+                        System.out.printf("\n You have Hired a  Doctor\n");
+                        break;
 
 
-                        case "Receptionist":
-                            staff.hireEmployee(new Receptionist(employeeType));
-                            System.out.printf("\n You have Hired a  Receptionist\n");
+                    case "Receptionist":
+                        staff.hireEmployee(new Receptionist(employeeType));
+                        System.out.printf("\n You have Hired a  Receptionist\n");
+                        break;
 
-                        case "Janitor":
-                            staff.hireEmployee(new Janitor(employeeType));
-                            System.out.printf("\n You have Hired a Janitor\n");
+                    case "Janitor":
+                        staff.hireEmployee(new Janitor(employeeType));
+                        System.out.printf("\n You have Hired a Janitor\n");
+                        break;
 
-                        case "Emergency Dispatcher":
-                            staff.hireEmployee(new EmergencyDispatcher(employeeType));
-                            System.out.printf("\n You have Hired a Emergency Dispatcher\n");
+                    case "Emergency Dispatcher":
+                        staff.hireEmployee(new EmergencyDispatcher(employeeType));
+                        System.out.printf("\n You have Hired a Emergency Dispatcher\n");
+                        break;
 
 
-                        default:
-                            System.out.printf("That was not a preset action ");
-
+                    default: {
+                        System.out.printf("That was not a preset action ");
                     }
 
+                }
 
-                    System.out.printf("\nWhat is the Employee's Name?");
+
+
+                System.out.printf("\nWhat is the Employee's Name?");
 //                    Employee newEmployee;
 //                    String employeeName = input.nextLine();
 //                    Employee newEmployee;
-
-                    staff.hireEmployee();
+                String newEmployee = input.nextLine();
+                staff.hireEmployee();
 //                    for (String employeeName : staff.getStaff().keySet()) {
 //                        Employee e2 = staff.getStaff().get(employeeName);
 //                        System.out.printf(employeeName = "\n-|-\n" + e2.getEmployeeType() + e2.getEmployeeName());
 //                    }
-                    System.out.printf("\n---Welcome to the Factory of Sadness---\n" +
-                            "\n---On 4th and long we run up the middle---");
-
-
+                System.out.printf("\n---Welcome to the Factory of Sadness---\n" +
+                        "\n---On 4th and long we run up the middle---");
 
 
                 if (r2.equalsIgnoreCase("Fire")) {
@@ -171,6 +180,7 @@ public class HospitalApplication {
         }
     }
 }
+
 
 
 
