@@ -7,6 +7,9 @@ public class HospitalApplication {
 
         Patientwing patientwing = new Patientwing();
         Staff staff = new Staff();
+        String employeeType = input.nextLine();
+        String newEmployee = input.nextLine();
+
 
 
         Employee ted = new EmergencyDispatcher("Ted");
@@ -47,14 +50,14 @@ public class HospitalApplication {
                 if (r2.equalsIgnoreCase("hire")) {
 
                     System.out.printf("\nWhat Position are you Hiring?");
-//                    String employeeType = input.nextLine();
+//                    String emplyeeType = input.nextLine();
 //                    input.nextLine();
 //                    r2.equalsIgnoreCase(employeeType);
 
 
-                    for (String employeeType : staff.getStaff().keySet()) {
-                        Employee e3 = staff.getStaff().get(employeeType);
-                        System.out.printf(employeeType + e3);
+//                    for (String employeeType : staff.getStaff().keySet()) {
+//                        Employee e3 = staff.getStaff().get(employeeType);
+//                        System.out.printf(employeeType + e3);
                     }
                     System.out.printf("\nHere are the Current Positions at Cle Browns Hospital\n" +
                             "<1>. Nurse\n" +
@@ -69,7 +72,7 @@ public class HospitalApplication {
 
                         case "Nurse":
 //                            hi = new Nurse(newEmployee);
-                            staff.hireEmployee();
+                            staff.hireEmployee(new Nurse(employeeType));
                             System.out.printf("\n You have Hired a Nurse\n");
 
 
@@ -84,7 +87,7 @@ public class HospitalApplication {
                             System.out.printf("\n You have Hired a  Receptionist\n");
 
                         case "Janitor":
-                            staff.hireEmployee(new Janitor);
+                            staff.hireEmployee(new Janitor(employeeType));
                             System.out.printf("\n You have Hired a Janitor\n");
 
                         case "Emergency Dispatcher":
@@ -100,10 +103,10 @@ public class HospitalApplication {
 
                     System.out.printf("\nWhat is the Employee's Name?");
 //                    Employee newEmployee;
-                    String employeeName = input.nextLine();
+//                    String employeeName = input.nextLine();
 //                    Employee newEmployee;
 
-                    staff.hireEmployee(newEmployee);
+                    staff.hireEmployee();
 //                    for (String employeeName : staff.getStaff().keySet()) {
 //                        Employee e2 = staff.getStaff().get(employeeName);
 //                        System.out.printf(employeeName = "\n-|-\n" + e2.getEmployeeType() + e2.getEmployeeName());
@@ -112,7 +115,7 @@ public class HospitalApplication {
                             "\n---On 4th and long we run up the middle---");
 
 
-                }
+
 
                 if (r2.equalsIgnoreCase("Fire")) {
                     System.out.printf("\nHere is the current Staff\n" +
@@ -124,9 +127,9 @@ public class HospitalApplication {
                     System.out.println(nick);
                     System.out.println(pam);
 
+                    Employee e2 = staff.getStaff().get("Name");
 
                     for (String employeeName : staff.getStaff().keySet()) {
-                        Employee e2 = staff.getStaff().get(employeeName);
 //                        System.out.printf(employeeName + "\n-|-\n" + e2.getEmployeeType());
                     }
 

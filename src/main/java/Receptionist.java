@@ -3,6 +3,7 @@ public class Receptionist extends Employee{
     public String numberOfCalls = "Too Many!";
     public String employeeType = "Receptionist";
     public String employeeName = "Pam";
+    public int salary = 45000;
 
     public Receptionist(String employeeName) {
         super(employeeName);

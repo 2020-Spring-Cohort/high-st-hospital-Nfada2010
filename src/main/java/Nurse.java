@@ -3,6 +3,8 @@ public class Nurse extends Employee{
     public String numberOfPatients = "Too Many!";
     public String employeeName = "Alice";
 
+    public int salary = 50000;
+
     public Nurse(String employeeName) {
         super(employeeName);
     }

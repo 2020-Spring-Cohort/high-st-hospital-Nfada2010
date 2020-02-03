@@ -1,4 +1,4 @@
-public abstract class Employee {
+public class Employee {
     public int salary;
     public int bloodLevel = 100;
     public int healthLevel = 100;
