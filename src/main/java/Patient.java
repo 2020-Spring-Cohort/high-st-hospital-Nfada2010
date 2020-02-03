@@ -4,15 +4,16 @@ public class Patient {
     public int healthLevel = 100;
     public String condition = "Is ill with a fever";
     public String bloodType = "A+";
-    public String patientName = "JohnDoe";
+    public String patientName;
 
     public Patient(String patientName) {
-        super();
+        this.patientName = patientName;
+//        super();
     }
 
     public void tick() {
-        bloodLevel -= 4;
-        healthLevel -= 2;
+        bloodLevel -= 10;
+        healthLevel -= 10;
         condition = "getting worse";
 
     }
@@ -27,7 +28,7 @@ public class Patient {
 
 
     public boolean isAlive() {
-        return isAlive;
+        return true;
     }
 
     public int getBloodLevel() {

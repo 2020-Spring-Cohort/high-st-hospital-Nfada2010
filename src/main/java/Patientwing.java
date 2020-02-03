@@ -11,7 +11,7 @@ public class Patientwing {
         this.patientHashMap.remove(newPatient);
     }
 
-    public boolean allPatients() {
+    public boolean allPatientsAlive() {
         return true;
     }
 
@@ -33,4 +33,8 @@ public class Patientwing {
     }
 
 
+//    public String checkStatus() {
+//        String status = "";
+//        return status();
+//    }
 }

@@ -53,13 +53,13 @@ public class Staff extends Employee{
 
     }
 
-    public HashMap checkStatus() {
-        HashMap status = staff;
-        for (Employee employee : staff.values()) {
-//            status += employee.toString() + "\n";
-        }
-        return status;
-    }
+//    public HashMap checkStatus() {
+//        HashMap status = staff;
+//        for (Employee employee : staff.values()) {
+////            status += employee.toString() + "\n";
+//        }
+//        return status;
+//    }
 
     public void fireEmployee(String employeeName) {
         this.staff.remove(employeeName);

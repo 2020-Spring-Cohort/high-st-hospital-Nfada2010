@@ -63,6 +63,7 @@ public class HospitalApplication {
 //                        System.out.printf(employeeType + e3);
 
                     System.out.printf("\nHere are the Current Positions at Cle Browns Hospital\n" +
+                            "\nChoose the position then type the name after\n" +
                             "<1>. Nurse\n" +
                             "<2>. Doctor\n " +
                             "<3>. Receptionist\n" +
@@ -146,75 +147,79 @@ public class HospitalApplication {
                     System.out.println(pam);
 
 //                    Employee e2 = staff.getStaff().get("Name");
-
+//
 //                    for (String employeeName : staff.getStaff().keySet()) {
 //                        System.out.printf(employeeName + "\n-|-\n" + e2.getEmployeeType());
+//                    }
 
 
-                    System.out.printf("\nWho is getting the Axe?\n");
+                        System.out.printf("\nWho is getting the Axe?\n");
 
-                    String r3 = input.nextLine();
-                    input.nextLine();
-                    staff.fireEmployee(r3);
-                    System.out.printf("\nCongrats they have been canned, hopefully they had savings...\n");
+                        String r3 = input.nextLine();
+                        input.next();
+                        staff.fireEmployee(r3);
+                        System.out.printf("\nCongrats they have been fired, hopefully they had savings...\n");
+
                 }
 
 
-                if (r2.equalsIgnoreCase("Treat")) {
+                    if (r2.equalsIgnoreCase("Treat")) {
 
-                    System.out.printf("\nWhat would you like to do in the Hospital?\n " +
-                            "\nHave Doctor <-drDraw->" +
-                            "\nHave Nurse <-nurseDraw->" +
-                            "\nPay Employees <-PAY->" +
-                            "\nCheck if Employee status<-status->" +
-                            "\nAdmit Patient<-admit->" +
-                            "\n Release Patient<-release->\n"
-                    );
-                    String interactMenu = input.nextLine();
-                    input.next();
-                    switch (interactMenu) {
+                        System.out.printf("\nWhat would you like to do in the Hospital?\n " +
+                                "\nHave Doctor <-drDraw->" +
+                                "\nHave Nurse <-nurseDraw->" +
+                                "\nPay Employees <-PAY->" +
+//                                "\nCheck if Employee status<-status->" +
+                                "\nAdmit Patient<-admit->" +
+                                "\n Release Patient<-release->\n"
+                        );
+                        String interactMenu = input.nextLine();
+                        input.next();
+                        switch (interactMenu) {
 
-                        case "drDraw":
+                            case "drDraw":
 
-                            patientwing.drawBlood();
-                            System.out.printf("The Doctor has drawn the blood of everyone on the floor!\n" +
-                                    "I don't think we actually needed that much...\n");
-                            break;
+                                patientwing.drawBlood();
+                                System.out.printf("\nThe Doctor has drawn the blood of everyone on the floor!\n" +
+                                        "I don't think we actually needed that much...\n");
+                                break;
 
-                        case "nurseDraw":
-                            patientwing.drawBlood();
-                            System.out.printf("The Nurse has drawn the blood everyone of their patients!\n");
-                            break;
-                        case "pay":
-                            staff.payEmployees();
-                            System.out.printf("Employees are all paid!\n");
-                            break;
-                        case "status":
-                            staff.checkStatus();
-                            System.out.printf("Here is the status of the staff\n" + staff);
-                            break;
+                            case "nurseDraw":
+                                patientwing.drawBlood();
+                                System.out.printf("\nThe Nurse has drawn the blood everyone of their patients!\n");
+                                break;
+                            case "pay":
+                                staff.payEmployees();
+                                System.out.printf("\nEmployees are all paid!\n");
+                                break;
+//                            case "status":
+//                                patientwing.checkStatus();
+//                                System.out.printf("Here is the status of the staff\n" + patientwing );
+//                                break;
 
-                        case "admit":
-                            patientwing.admitPatient(john);
-                            System.out.printf("Patient has been Admitted\n");
-                            break;
+                            case "admit":
+                                patientwing.admitPatient(john);
+                                System.out.printf("\nPatient has been Admitted\n");
+                                break;
 
-                        case "release":
-                            patientwing.releasePatient("");
-                            System.out.printf("Patient has been released\n");
-                            break;
+                            case "release":
+                                patientwing.releasePatient("");
+                                System.out.printf("\nPatient has been released\n");
+                                break;
 
-                        default:
-                            System.out.printf("Please try typing something that actually does something");
-                            break;
+                            default:
+                                System.out.printf("Please try typing something that actually does something");
+                                break;
 
+                        }
                     }
                 }
-            }
+        } else {
+            System.exit(0);
         }
+    }
 
     }
-}
 
 
 

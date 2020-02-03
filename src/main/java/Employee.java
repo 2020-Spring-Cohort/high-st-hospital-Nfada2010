@@ -2,6 +2,14 @@ public abstract class Employee {
     public int salary = 45000;
     public int bloodLevel = 100;
     public int healthLevel = 100;
+    public String employeeName;
+    public  String employeeIDnumber = "325184";
+
+    public String employeeType = "Nurse";
+    public String numberOfPatients = "Too Many!";
+    public String isPaid = "| Paid in Full |";
+    public String isBusy = "| This employee is currently busy and cannot take on a new task |";
+
 
     public Employee() {
 
@@ -19,13 +27,7 @@ public abstract class Employee {
         return isPaid;
     }
 
-    public String employeeIDnumber = "12341";
 //    public String wasPaid;
-    public String employeeType = "Nurse";
-    public String numberOfPatients = "Too Many!";
-    public String employeeName;
-    public String isPaid = "| Paid in Full |";
-    public String isBusy = "| This employee is currently busy and cannot take on a new task |";
 
 
     public Employee(String employeeName){
